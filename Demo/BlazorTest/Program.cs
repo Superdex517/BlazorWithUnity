@@ -8,7 +8,7 @@ namespace BlazorTest
         {
             Console.WriteLine("Hello World!");
 
-            Console.ReadLine();
+            Console.ReadLine();//테스트
         }
     }
 }
