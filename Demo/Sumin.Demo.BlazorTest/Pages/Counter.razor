@@ -1,0 +1,16 @@
+﻿@page "/counter"
+@inject Services.CounterService service
+
+<h1>Counter</h1>
+
+<p>현재 카운드: @service.currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">클릭</button>
+
+@code {
+
+    private void IncrementCount()
+    {
+        ++service.currentCount;
+    }
+}
