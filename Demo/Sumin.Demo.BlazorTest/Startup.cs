@@ -33,6 +33,7 @@ namespace Sumin.Demo.BlazorTest
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<CounterService>();
+            services.AddSingleton<ChatService>();
             //services.AddSingleton<WeatherForecastService>();
         }
         

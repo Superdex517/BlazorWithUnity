@@ -1,0 +1,28 @@
+﻿@page "/chat"
+@inject Services.ChatService service
+
+<h3>채팅</h3>
+
+@*채팅 목록*@
+
+<dir>
+    @foreach(var message in service.messages)
+    {
+        <p>@message</p>
+    }
+</dir>
+
+@*메시지 입력*@
+
+<dir>
+    메시지 : <input type="text" @bind="this.inputMessage"/><button type="submit" @onclick="@onClickSendMessage">입력</button>
+</dir>
+
+@code {
+    string inputMessage = "";
+
+    void onClickSendMessage(MouseEventArgs args)
+    {
+        this.service.addMessage(this.inputMessage);
+    }
+}
