@@ -11,6 +11,7 @@ namespace Sumin.Demo.BlazorTest.Models
     {
         [Inject] public ChatService service { get; set; }
 
+        //초기화함수
         protected override async Task OnInitializedAsync()
         {
             this.service.addPlayer(this);
